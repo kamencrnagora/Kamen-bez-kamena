@@ -407,8 +407,12 @@
     .contact-grid{grid-template-columns:1fr; gap:44px;}
   }
   @media (max-width: 720px){
-    nav ul{display:none;}
-    .nav-toggle{display:flex;}
+    nav{position:relative;}
+    nav ul{display:none; position:fixed; top:64px; left:0; right:0; width:100%; flex-direction:column; gap:0; background:var(--stone-950); border-top:1px solid rgba(201,184,150,0.25); border-bottom:1px solid rgba(201,184,150,0.25); padding:10px 0; z-index:150;}
+    nav ul.mobile-open{display:flex;}
+    nav ul li{width:100%;}
+    nav ul a{display:block; width:100%; padding:16px 22px;}
+    .nav-toggle{display:flex; position:relative; z-index:200;}
     section{padding:70px 0;}
     .wrap{padding:0 22px;}
   }
