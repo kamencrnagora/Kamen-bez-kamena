@@ -412,6 +412,33 @@
     section{padding:70px 0;}
     .wrap{padding:0 22px;}
   }
+
+  /* ---------- MOBILE + IMAGE LOADING FIX ---------- */
+  img{width:100%; height:100%; object-fit:cover;}
+  .swatch img,.prod-visual img,.hero-visual img,.why-visual img,.about-visual img{background:var(--limestone-100);}
+  @media (max-width:720px){
+    .header-inner{height:64px;padding:0 16px;}
+    header .logo-text{font-size:.92rem;}
+    nav > .btn{display:none;}
+    nav{gap:0;}
+    .hero{padding-top:64px;min-height:auto;}
+    .hero-visual{min-height:52vw;max-height:420px;}
+    .hero-copy{padding:48px 22px 54px;}
+    .hero-copy h1{font-size:clamp(2.15rem,10vw,3rem);}
+    .hero-actions{flex-direction:column;align-items:stretch;}
+    .hero-actions .btn{justify-content:center;white-space:normal;text-align:center;}
+    .prod-grid{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:120px;}
+    .g-item.tall{grid-row:span 2;}
+    .stat-row{gap:20px;flex-wrap:wrap;}
+    .contact-details .row{flex-direction:column;gap:6px;}
+    .contact-details .k{width:auto;}
+    #editor-bar{right:12px;bottom:12px;left:12px;}
+    .editor-btn{flex:1;justify-content:center;padding:12px 8px;font-size:.65rem;}
+    #editor-hint{right:12px;left:12px;bottom:68px;}
+    .modal-overlay{align-items:flex-end;padding:12px;}
+    .modal-box{max-width:none;padding:28px 20px;max-height:90vh;overflow:auto;}
+  }
 </style>
 </head>
 <body class="">
@@ -1162,37 +1189,61 @@ document.addEventListener('click', (e) => {
   }
 });
 
-newProdFile.addEventListener('change', () => {
+async function prepareImage(file, maxSide = 2200, quality = 0.88){
+  if(!file || !file.type.startsWith('image/')) throw new Error('Izaberi sliku.');
+  // Keep GIF/SVG untouched; compress normal camera photos to prevent huge HTML files.
+  if(file.type === 'image/gif' || file.type === 'image/svg+xml'){
+    return URL.createObjectURL(file);
+  }
+  const bitmap = await createImageBitmap(file);
+  const scale = Math.min(1, maxSide / Math.max(bitmap.width, bitmap.height));
+  const canvas = document.createElement('canvas');
+  canvas.width = Math.max(1, Math.round(bitmap.width * scale));
+  canvas.height = Math.max(1, Math.round(bitmap.height * scale));
+  canvas.getContext('2d').drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+  if(bitmap.close) bitmap.close();
+  return await new Promise(resolve => canvas.toBlob(blob => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.readAsDataURL(blob || file);
+  }, 'image/jpeg', quality));
+}
+
+function showImageError(err){
+  console.error('Image loading error:', err);
+  alert('Slika nije mogla da se učita. Pokušaj JPG, PNG ili WebP fotografiju.');
+}
+
+newProdFile.addEventListener('change', async () => {
   const file = newProdFile.files[0];
   if(!file) return;
-  const reader = new FileReader();
-  reader.onload = (e) => {
-    const card = buildProductCard(newProdFile.dataset.pendingName, newProdFile.dataset.pendingDesc, null, e.target.result);
+  try{
+    const src = await prepareImage(file);
+    const card = buildProductCard(newProdFile.dataset.pendingName, newProdFile.dataset.pendingDesc, null, src);
     const addCard = document.getElementById('add-product-card');
     addCard.parentNode.insertBefore(card, addCard.parentNode.querySelector('.soon-card') || addCard);
-  };
-  reader.readAsDataURL(file);
+  }catch(err){ showImageError(err); }
 });
 
-hiddenFileInput.addEventListener('change', () => {
+hiddenFileInput.addEventListener('change', async () => {
   const file = hiddenFileInput.files[0];
   if(!file || !activeSwatch) return;
-  const reader = new FileReader();
-  reader.onload = (e) => {
-    // clear existing visual content (svg / img) but keep captions
+  try{
+    const src = await prepareImage(file);
     const caption = activeSwatch.querySelector('.caption');
     activeSwatch.innerHTML = '';
     const img = document.createElement('img');
-    img.src = e.target.result;
+    img.src = src;
     img.alt = 'custom';
+    img.loading = 'lazy';
+    img.decoding = 'async';
     activeSwatch.appendChild(img);
     const sheen = document.createElement('div');
     sheen.className = 'sheen';
     activeSwatch.appendChild(sheen);
     if(caption) activeSwatch.appendChild(caption);
     activeSwatch.removeAttribute('data-img');
-  };
-  reader.readAsDataURL(file);
+  }catch(err){ showImageError(err); }
 });
 
 exportBtn.addEventListener('click', () => {
@@ -1215,10 +1266,14 @@ exportBtn.addEventListener('click', () => {
 /* ---------------- mobile nav ---------------- */
 const toggle = document.querySelector('.nav-toggle');
 const navUl = document.querySelector('nav ul');
+toggle.setAttribute('aria-expanded','false');
+function closeMobileNav(){ navUl.classList.remove('mobile-open'); toggle.setAttribute('aria-expanded','false'); }
 toggle.addEventListener('click', () => {
-  const open = navUl.style.display === 'flex';
-  navUl.style.cssText = open ? '' : 'display:flex; flex-direction:column; position:fixed; top:76px; left:0; right:0; background:#1b1712; padding:20px 32px; gap:18px; border-bottom:1px solid rgba(201,184,150,0.25);';
+  const open = navUl.classList.toggle('mobile-open');
+  toggle.setAttribute('aria-expanded', String(open));
 });
+navUl.addEventListener('click', e => { if(e.target.closest('a')) closeMobileNav(); });
+window.addEventListener('resize', () => { if(window.innerWidth > 720) closeMobileNav(); });
 </script><input type="file" accept="image/*" style="display: none;">
 
 
