@@ -555,6 +555,38 @@
     section{padding:70px 0;}
     .wrap{padding:0 22px;}
   }
+
+  /* ---------- MOBILE FIXES: no sideways overflow, no auto-zoom ---------- */
+  html{-webkit-text-size-adjust:100%; text-size-adjust:100%; overflow-x:clip;}
+  body{overflow-x:clip; max-width:100%;}
+  .prod-grid{grid-template-columns:repeat(3, minmax(0,1fr));}
+  .prod-card, .cat-card, .g-item, .workshop-item{min-width:0;}
+  .contact-details .v{overflow-wrap:anywhere; min-width:0;}
+  @media (max-width: 980px){
+    .prod-grid{grid-template-columns:repeat(2, minmax(0,1fr));}
+    .gallery-grid, .workshop-grid{grid-template-columns:repeat(2, minmax(0,1fr));}
+  }
+  @media (max-width: 720px){
+    .header-inner{padding:0 16px; height:68px;}
+    header .logo-text{font-size:0.92rem;}
+    header .logo-mark{width:32px; height:32px;}
+    nav{gap:0;}
+    nav > .btn{display:none;}
+    .prod-grid{gap:14px;}
+    .prod-name{flex-direction:column; align-items:flex-start; gap:4px; padding:12px 12px 14px; font-size:0.78rem;}
+    .prod-name .idx{font-size:0.66rem; line-height:1.35; text-transform:none; letter-spacing:0.02em;}
+    .hero-copy{padding:48px 22px;}
+    .prod-note{padding:28px 20px; margin-top:32px;}
+    .workshop-title{max-width:none;}
+    .modal-box{padding:28px 22px;}
+    #editor-bar{right:12px; bottom:12px; flex-wrap:wrap; justify-content:flex-end; max-width:calc(100vw - 24px);}
+    .contact-details .row{flex-direction:column; gap:4px;}
+    .contact-details .k{width:auto;}
+  }
+  @media (max-width: 420px){
+    .gallery-grid{grid-auto-rows:110px;}
+    .section-head{margin-bottom:36px;}
+  }
 </style>
 </head>
 <body class="">
@@ -1397,6 +1429,7 @@ if(contactForm){
 /* ---------------- mobile nav ---------------- */
 const toggle = document.querySelector('.nav-toggle');
 const navUl = document.querySelector('nav ul');
+navUl.addEventListener('click', (e) => { if(e.target.closest('a')) navUl.style.cssText = ''; });
 toggle.addEventListener('click', () => {
   const open = navUl.style.display === 'flex';
   navUl.style.cssText = open ? '' : 'display:flex; flex-direction:column; position:fixed; top:76px; left:0; right:0; background:#1b1712; padding:20px 32px; gap:18px; border-bottom:1px solid rgba(201,184,150,0.25);';
