@@ -1,9 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.dekorativnikamen.me/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-11-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/dekorativni-kamen-rucno-izradjena-imitacija-kamena-za-zidove-i-fasade.webp</image:loc>
+      <image:title>Dekorativni kamen — ručno izrađena imitacija kamena za zidove i fasade</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/zid-oblozen-dekorativnom-imitacijom-kamena-instagram-kamenbezkamena.webp</image:loc>
+      <image:title>Zid obložen dekorativnom imitacijom kamena — Instagram @kamenbezkamena</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/imitacija-stijene-reljefna-tekstura-prirodne-litice-za-akcentne-zidove-i.webp</image:loc>
+      <image:title>Imitacija stijene — reljefna tekstura prirodne litice za akcentne zidove i fasade</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/imitacija-drveta-topla-struktura-drvenog-vlakna.webp</image:loc>
+      <image:title>Imitacija drveta — topla struktura drvenog vlakna</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/imitacija-kamena-precizno-oblikovani-paneli-klesanog-kamena.webp</image:loc>
+      <image:title>Imitacija kamena — precizno oblikovani paneli klesanog kamena</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/dekorativni-kamen-gotova-povrsina-izbliza.webp</image:loc>
+      <image:title>Gotova površina izbliza</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/dekorativni-kamen-modelirajuci-sloj-u-izradi.webp</image:loc>
+      <image:title>Modelirajući sloj u izradi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/dekorativni-kamen-gotova-obloga-detalj-ugla.webp</image:loc>
+      <image:title>Gotova obloga — detalj ugla</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/dekorativni-kamen-rucno-urezivanje-teksture.webp</image:loc>
+      <image:title>Ručno urezivanje teksture</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/poslije-isti-dnevni-boravak-sa-zidom-oblozenim-dekorativnim-kamenom.webp</image:loc>
+      <image:title>Poslije: isti dnevni boravak sa zidom obloženim dekorativnim kamenom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/dekorativni-kamen-prije-dnevni-boravak-sa-glatkim-bijelim-zidom.webp</image:loc>
+      <image:title>Prije: dnevni boravak sa glatkim bijelim zidom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/dekorativni-kamen-pravilnog-zidarskog-slaganja-za-fasadu-i-enterijer.webp</image:loc>
+      <image:title>Dekorativni kamen pravilnog zidarskog slaganja za fasadu i enterijer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/fasada-oblozena-dekorativnim-kamenom-razlicitih-velicina.webp</image:loc>
+      <image:title>Fasada obložena dekorativnim kamenom različitih veličina</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/tamniji-dekorativni-kamen-sa-svijetlom-fugom.webp</image:loc>
+      <image:title>Tamniji dekorativni kamen sa svijetlom fugom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/ugao-zida-od-dekorativnog-kamena-na-suncu.webp</image:loc>
+      <image:title>Ugao zida od dekorativnog kamena na suncu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/svijetli-sivi-dekorativni-kamen.webp</image:loc>
+      <image:title>Svijetli sivi dekorativni kamen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/svijetli-pravilni-dekorativni-kamen.webp</image:loc>
+      <image:title>Svijetli pravilni dekorativni kamen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/dekorativni-kamen-u-bez-tonu-krupne-strukture.webp</image:loc>
+      <image:title>Dekorativni kamen u bež tonu krupne strukture</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/topli-krem-dekorativni-kamen.webp</image:loc>
+      <image:title>Topli krem dekorativni kamen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/smedji-i-bez-tonovi-dekorativnog-kamena.webp</image:loc>
+      <image:title>Smeđi i bež tonovi dekorativnog kamena</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/dnevna-soba-sa-zidom-oblozenim-svijetlim-dekorativnim-kamenom.webp</image:loc>
+      <image:title>Dnevna soba sa zidom obloženim svijetlim dekorativnim kamenom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/dnevni-boravak-sa-zidom-od-dekorativnog-kamena.webp</image:loc>
+      <image:title>Dnevni boravak sa zidom od dekorativnog kamena</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/dnevna-soba-sa-zidom-od-sivog-dekorativnog-kamena.webp</image:loc>
+      <image:title>Dnevna soba sa zidom od sivog dekorativnog kamena</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/kuca-sa-fasadom-i-terasom-od-dekorativnog-kamena.webp</image:loc>
+      <image:title>Kuća sa fasadom i terasom od dekorativnog kamena</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/ograda-i-stubovi-oblozeni-sivim-dekorativnim-kamenom.webp</image:loc>
+      <image:title>Ograda i stubovi obloženi sivim dekorativnim kamenom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/dnevni-boravak-sa-kamenim-zidovima-od-dekorativnog-kamena-i-drvenim-gredama.webp</image:loc>
+      <image:title>Dnevni boravak sa kamenim zidovima od dekorativnog kamena i drvenim gredama</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/render-kupatilo-sa-akcentnim-zidom-od-dekorativnog-kamena.webp</image:loc>
+      <image:title>Render: kupatilo sa akcentnim zidom od dekorativnog kamena</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/render-fasada-od-dekorativnog-kamena-sa-nocnim-osvjetljenjem.webp</image:loc>
+      <image:title>Render: fasada od dekorativnog kamena sa noćnim osvjetljenjem</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/render-vila-od-kamena-sa-pogledom-na-more.webp</image:loc>
+      <image:title>Render: vila od kamena sa pogledom na more</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/render-enterijer-sa-dekorativnim-kamenom-i-drvetom.webp</image:loc>
+      <image:title>Render: enterijer sa dekorativnim kamenom i drvetom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/render-dnevna-soba-sa-kaminom-i-zidom-od-dekorativnog-kamena.webp</image:loc>
+      <image:title>Render: dnevna soba sa kaminom i zidom od dekorativnog kamena</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/render-terasa-sa-bazenom-i-zidom-od-dekorativnog-kamena.webp</image:loc>
+      <image:title>Render: terasa sa bazenom i zidom od dekorativnog kamena</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/render-moderna-fasada-od-dekorativnog-kamena.webp</image:loc>
+      <image:title>Render: moderna fasada od dekorativnog kamena</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.dekorativnikamen.me/slike/majstor-ispred-kamene-kuce-i-alat-za-klesanje-kamena.webp</image:loc>
+      <image:title>Majstor ispred kamene kuće i alat za klesanje kamena</image:title>
+    </image:image>
   </url>
 </urlset>
